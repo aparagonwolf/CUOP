@@ -92,6 +92,10 @@ namespace ClassicUO.Configuration
         
         [JsonPropertyName("files_override")] public string OverrideFile { get; set; }
 
+        [JsonPropertyName("file_format_preference")]
+        public string FileFormatPreference { get; set; } = "auto";
+        // Valid values: "auto" (default), "mul", "uop"
+
         public static string GetSettingsFilepath()
         {
             if (CustomSettingsFilepath != null)
