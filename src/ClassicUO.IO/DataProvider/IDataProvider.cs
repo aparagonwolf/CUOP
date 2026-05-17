@@ -28,12 +28,14 @@ namespace ClassicUO.IO.DataProvider
         /// <summary>
         /// Determines if the provider can handle the specified asset type.
         /// </summary>
+        /// <param name="assetType">The asset type to check.</param>
+        /// <returns>true if this provider can handle the asset type; otherwise false.</returns>
         bool CanHandle(AssetType assetType);
 
         /// <summary>
         /// Gets a readable stream for the specified asset. Returns null if not found.
         /// </summary>
-        AssetStream GetAsset(int assetId);
+        AssetStream? GetAsset(int assetId);
     }
 
     /// <summary>
@@ -62,7 +64,8 @@ namespace ClassicUO.IO.DataProvider
 
         public void Dispose()
         {
-            // Cleanup if needed
+            // This class currently manages no unmanaged resources
+            GC.SuppressFinalize(this);
         }
     }
 }
