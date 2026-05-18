@@ -41,7 +41,10 @@ namespace ClassicUO.Assets
                 }
             }
 
-            _file.FillEntries();
+            if (_file != null)
+            {
+                _file.FillEntries();
+            }
         }
 
         // public Rectangle GetRealArtBounds(int index) =>

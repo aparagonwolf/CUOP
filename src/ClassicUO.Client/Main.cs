@@ -161,7 +161,12 @@ namespace ClassicUO
 
             uint flags = 0;
 
-            if (!Directory.Exists(Settings.GlobalSettings.UltimaOnlineDirectory) || !File.Exists(Path.Combine(Settings.GlobalSettings.UltimaOnlineDirectory, "tiledata.mul")))
+            // Check for either MUL format (tiledata.mul) or UOP format (*.uop files)
+            bool dirExists = Directory.Exists(Settings.GlobalSettings.UltimaOnlineDirectory);
+            bool hasMulFiles = dirExists && File.Exists(Path.Combine(Settings.GlobalSettings.UltimaOnlineDirectory, "tiledata.mul"));
+            bool hasUopFiles = dirExists && Directory.GetFiles(Settings.GlobalSettings.UltimaOnlineDirectory, "*.uop").Length > 0;
+
+            if (!dirExists || (!hasMulFiles && !hasUopFiles))
             {
                 flags |= INVALID_UO_DIRECTORY;
             }

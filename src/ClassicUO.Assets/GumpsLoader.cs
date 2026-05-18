@@ -46,12 +46,18 @@ namespace ClassicUO.Assets
                     pathidx = FileManager.GetUOFilePath("Gumpidx.mul");
                 }
 
-                _file = new UOFileMul(path, pathidx);
+                if (System.IO.File.Exists(path) && System.IO.File.Exists(pathidx))
+                {
+                    _file = new UOFileMul(path, pathidx);
+                }
 
                 UseUOPGumps = false;
             }
 
-            _file.FillEntries();
+            if (_file != null)
+            {
+                _file.FillEntries();
+            }
 
             string pathdef = FileManager.GetUOFilePath("gump.def");
 

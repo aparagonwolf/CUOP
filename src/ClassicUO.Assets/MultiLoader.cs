@@ -39,7 +39,10 @@ namespace ClassicUO.Assets
                 }
             }
 
-            File.FillEntries();
+            if (File != null)
+            {
+                File.FillEntries();
+            }
         }
 
         public List<MultiInfo> GetMultis(uint idx)

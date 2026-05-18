@@ -43,13 +43,12 @@ namespace ClassicUO.Assets
                 {
                     _file = new UOFileMul(path, idxpath);
                 }
-                else
-                {
-                    throw new FileNotFoundException("no sounds found");
-                }
             }
 
-            _file.FillEntries();
+            if (_file != null)
+            {
+                _file.FillEntries();
+            }
 
             string def = FileManager.GetUOFilePath("Sound.def");
 

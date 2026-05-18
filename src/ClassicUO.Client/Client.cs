@@ -189,7 +189,7 @@ namespace ClassicUO
             var filesOverride = new UOFilesOverrideMap(Settings.GlobalSettings.OverrideFile);
             filesOverride.Load();
             FileManager = new UOFileManager(clientVersion, clientPath, filesOverride);
-            FileManager.Load(Settings.GlobalSettings.UseVerdata, Settings.GlobalSettings.Language, Settings.GlobalSettings.MapsLayouts);
+            FileManager.Load(Settings.GlobalSettings.UseVerdata, Settings.GlobalSettings.Language, Settings.GlobalSettings.MapsLayouts, Settings.GlobalSettings.FileFormatPreference);
 
             StaticFilters.Load(FileManager.TileData);
             BuffTable.Load();

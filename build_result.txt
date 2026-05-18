@@ -1,0 +1,136 @@
+Build started 5/17/2026 8:05:52 PM.
+     1>Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj" on node 1 (Restore target(s)).
+     1>_GetAllRestoreProjectPathItems:
+         Determining projects to restore...
+     1>Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj" (1) is building "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Utility\ClassicUO.Utility.csproj" (4:4) on node 2 (_GenerateProjectRestoreGraph target(s)).
+     4>AddPrunePackageReferences:
+         Loading prune package data from PrunePackageData folder
+         Failed to load prune package data from PrunePackageData folder, loading from targeting packs instead
+         Looking for targeting packs in C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref
+         Pack directories found: C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.7
+         Found package overrides file C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.7\data\PackageOverrides.txt
+     4>Done Building Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Utility\ClassicUO.Utility.csproj" (_GenerateProjectRestoreGraph target(s)).
+     1>Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj" (1) is building "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj" (1:6) on node 1 (_GenerateProjectRestoreGraph target(s)).
+     1>AddPrunePackageReferences:
+         Loading prune package data from PrunePackageData folder
+         Failed to load prune package data from PrunePackageData folder, loading from targeting packs instead
+     1>Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj" (1) is building "C:\Users\Tristan\Desktop\ClassicUO\external\MP3Sharp\MP3Sharp\MP3Sharp.csproj" (3:8) on node 3 (_GenerateProjectRestoreGraph target(s)).
+   3:8>Project "C:\Users\Tristan\Desktop\ClassicUO\external\MP3Sharp\MP3Sharp\MP3Sharp.csproj" (3:8) is building "C:\Users\Tristan\Desktop\ClassicUO\external\MP3Sharp\MP3Sharp\MP3Sharp.csproj" (3:11) on node 3 (_GenerateProjectRestoreGraphPerFramework target(s)).
+     3>AddPrunePackageReferences:
+         Loaded prune package data from framework packages
+     1>AddPrunePackageReferences:
+         Looking for targeting packs in C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref
+     3>Done Building Project "C:\Users\Tristan\Desktop\ClassicUO\external\MP3Sharp\MP3Sharp\MP3Sharp.csproj" (_GenerateProjectRestoreGraphPerFramework target(s)).
+     1>AddPrunePackageReferences:
+         Pack directories found: C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.7
+   3:8>Project "C:\Users\Tristan\Desktop\ClassicUO\external\MP3Sharp\MP3Sharp\MP3Sharp.csproj" (3:8) is building "C:\Users\Tristan\Desktop\ClassicUO\external\MP3Sharp\MP3Sharp\MP3Sharp.csproj" (3:12) on node 2 (_GenerateProjectRestoreGraphPerFramework target(s)).
+     3>AddPrunePackageReferences:
+         Loaded prune package data from framework packages
+     1>AddPrunePackageReferences:
+         Found package overrides file C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\10.0.7\data\PackageOverrides.txt
+     3>Done Building Project "C:\Users\Tristan\Desktop\ClassicUO\external\MP3Sharp\MP3Sharp\MP3Sharp.csproj" (_GenerateProjectRestoreGraphPerFramework target(s)).
+     3>Done Building Project "C:\Users\Tristan\Desktop\ClassicUO\external\MP3Sharp\MP3Sharp\MP3Sharp.csproj" (_GenerateProjectRestoreGraph target(s)).
+     1>Done Building Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj" (_GenerateProjectRestoreGraph target(s)).
+     1>Restore:
+         X.509 certificate chain validation will use the default trust store selected by .NET for code signing.
+         X.509 certificate chain validation will use the default trust store selected by .NET for timestamping.
+         Assets file has not changed. Skipping assets file writing. Path: C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\obj\project.assets.json
+         Assets file has not changed. Skipping assets file writing. Path: C:\Users\Tristan\Desktop\ClassicUO\external\FNA\obj_core\project.assets.json
+         Assets file has not changed. Skipping assets file writing. Path: C:\Users\Tristan\Desktop\ClassicUO\external\MP3Sharp\MP3Sharp\obj\project.assets.json
+         Assets file has not changed. Skipping assets file writing. Path: C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Utility\obj\project.assets.json
+         Assets file has not changed. Skipping assets file writing. Path: C:\Users\Tristan\Desktop\ClassicUO\external\FileEmbed\FileEmbed\obj\project.assets.json
+         Restored C:\Users\Tristan\Desktop\ClassicUO\external\FNA\FNA.Core.csproj (in 34 ms).
+         Restored C:\Users\Tristan\Desktop\ClassicUO\external\MP3Sharp\MP3Sharp\MP3Sharp.csproj (in 34 ms).
+         Restored C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj (in 34 ms).
+         Restored C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Utility\ClassicUO.Utility.csproj (in 34 ms).
+         Restored C:\Users\Tristan\Desktop\ClassicUO\external\FileEmbed\FileEmbed\FileEmbed.csproj (in 34 ms).
+         
+         NuGet Config files used:
+             C:\Users\Tristan\AppData\Roaming\NuGet\NuGet.Config
+             C:\Program Files (x86)\NuGet\Config\Microsoft.VisualStudio.Offline.config
+         
+         Feeds used:
+             https://api.nuget.org/v3/index.json
+             C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
+         All projects are up-to-date for restore.
+     1>Done Building Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj" (Restore target(s)).
+   1:7>Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj" on node 4 (default targets).
+   1:7>Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj" (1:7) is building "C:\Users\Tristan\Desktop\ClassicUO\external\FileEmbed\FileEmbed\FileEmbed.csproj" (2:7) on node 2 (default targets).
+     2>GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       CoreGenerateAssemblyInfo:
+       Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+       _GenerateSourceLinkFile:
+         Source Link file 'obj\Debug\netstandard2.0\FileEmbed.sourcelink.json' is up-to-date.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildDependencyFile:
+       Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+       CopyFilesToOutputDirectory:
+         FileEmbed -> C:\Users\Tristan\Desktop\ClassicUO\external\FileEmbed\FileEmbed\bin\Debug\netstandard2.0\FileEmbed.dll
+       GenerateNuspec:
+       Skipping target "GenerateNuspec" because all output files are up-to-date with respect to the input files.
+     2>Done Building Project "C:\Users\Tristan\Desktop\ClassicUO\external\FileEmbed\FileEmbed\FileEmbed.csproj" (default targets).
+   1:7>Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj" (1:7) is building "C:\Users\Tristan\Desktop\ClassicUO\external\FNA\FNA.Core.csproj" (5:7) on node 3 (default targets).
+     5>ValidatePropsFilePath:
+         No property overrides found at 'FNA.Settings.props'
+       GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       _GenerateSourceLinkFile:
+         Source Link file 'obj_core\Debug\net8.0\FNA.Core.sourcelink.json' is up-to-date.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       _CopyAppConfigFile:
+       Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildDependencyFile:
+       Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+       CopyFilesToOutputDirectory:
+         FNA.Core -> C:\Users\Tristan\Desktop\ClassicUO\external\FNA\bin\Debug\net8.0\FNA.dll
+     5>Done Building Project "C:\Users\Tristan\Desktop\ClassicUO\external\FNA\FNA.Core.csproj" (default targets).
+   1:7>Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj" (1:7) is building "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Utility\ClassicUO.Utility.csproj" (4:6) on node 4 (default targets).
+     4>GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       CoreGenerateAssemblyInfo:
+       Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+       _GenerateSourceLinkFile:
+         Source Link file 'obj\Debug\net10.0\ClassicUO.Utility.sourcelink.json' is up-to-date.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildDependencyFile:
+       Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+       CopyFilesToOutputDirectory:
+         ClassicUO.Utility -> C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Utility\bin\Debug\net10.0\ClassicUO.Utility.dll
+     4>Done Building Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Utility\ClassicUO.Utility.csproj" (default targets).
+   1:7>Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj" (1:7) is building "C:\Users\Tristan\Desktop\ClassicUO\external\MP3Sharp\MP3Sharp\MP3Sharp.csproj" (3:16) on node 4 (default targets).
+     3>GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       CoreGenerateAssemblyInfo:
+       Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+       _GenerateSourceLinkFile:
+         Source Link file 'obj\Debug\netstandard2.0\MP3Sharp.sourcelink.json' is up-to-date.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildDependencyFile:
+       Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+       CopyFilesToOutputDirectory:
+         MP3Sharp -> C:\Users\Tristan\Desktop\ClassicUO\external\MP3Sharp\MP3Sharp\bin\Debug\netstandard2.0\MP3Sharp.dll
+     3>Done Building Project "C:\Users\Tristan\Desktop\ClassicUO\external\MP3Sharp\MP3Sharp\MP3Sharp.csproj" (default targets).
+     1>GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       CoreGenerateAssemblyInfo:
+       Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+       _GenerateSourceLinkFile:
+         Source Link file 'obj\Debug\net10.0\ClassicUO.IO.sourcelink.json' is up-to-date.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildDependencyFile:
+       Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+       CopyFilesToOutputDirectory:
+         ClassicUO.IO -> C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\bin\Debug\net10.0\ClassicUO.IO.dll
+     1>Done Building Project "C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\ClassicUO.IO.csproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.86
