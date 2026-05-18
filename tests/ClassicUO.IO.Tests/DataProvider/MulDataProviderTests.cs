@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: BSD-2-Clause
 
+#nullable enable
+
 using Xunit;
 using ClassicUO.IO;
 using ClassicUO.IO.DataProvider;
