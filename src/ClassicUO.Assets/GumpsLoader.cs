@@ -26,7 +26,7 @@ namespace ClassicUO.Assets
         {
             string path = FileManager.GetUOFilePath("gumpartLegacyMUL.uop");
 
-            if (FileManager.IsUOPInstallation && System.IO.File.Exists(path))
+            if (FileManager.CurrentDataProvider?.ProviderName == "UOP" && System.IO.File.Exists(path))
             {
                 _file = new UOFileUop(path, "build/gumpartlegacymul/{0:D8}.tga", true);
                 UseUOPGumps = true;

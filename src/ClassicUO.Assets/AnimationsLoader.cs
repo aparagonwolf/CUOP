@@ -64,7 +64,7 @@ namespace ClassicUO.Assets
                 }
             }
 
-            if (FileManager.IsUOPInstallation)
+            if (FileManager.CurrentDataProvider?.ProviderName == "UOP")
             {
                 var loaduop = false;
 

@@ -144,7 +144,7 @@ namespace ClassicUO.Assets
             {
                 var path = FileManager.GetUOFilePath($"map{i}LegacyMUL.uop");
 
-                if (FileManager.IsUOPInstallation && File.Exists(path))
+                if (FileManager.CurrentDataProvider?.ProviderName == "UOP" && File.Exists(path))
                 {
                     var uopFile = new UOFileUop(path, $"build/map{i}legacymul/{{0:D8}}.dat");
                     uopFile.FillEntries();

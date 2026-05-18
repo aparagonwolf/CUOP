@@ -30,7 +30,7 @@ namespace ClassicUO.Assets
         {
             string path = FileManager.GetUOFilePath("soundLegacyMUL.uop");
 
-            if (FileManager.IsUOPInstallation && File.Exists(path))
+            if (FileManager.CurrentDataProvider?.ProviderName == "UOP" && File.Exists(path))
             {
                 _file = new UOFileUop(path, "build/soundlegacymul/{0:D8}.dat");
             }

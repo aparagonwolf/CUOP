@@ -24,7 +24,7 @@ namespace ClassicUO.Assets
         {
             var uopPath = FileManager.GetUOFilePath("MultiCollection.uop");
 
-            if (FileManager.IsUOPInstallation && System.IO.File.Exists(uopPath))
+            if (FileManager.CurrentDataProvider?.ProviderName == "UOP" && System.IO.File.Exists(uopPath))
             {
                 File = new UOFileUop(uopPath, "build/multicollection/{0:D6}.bin");
             }
