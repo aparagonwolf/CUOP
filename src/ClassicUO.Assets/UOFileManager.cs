@@ -1,6 +1,9 @@
 ﻿// SPDX-License-Identifier: BSD-2-Clause
 
+#nullable enable
+
 using ClassicUO.IO;
+using ClassicUO.IO.DataProvider;
 using ClassicUO.Utility;
 using ClassicUO.Utility.Logging;
 using ClassicUO.Utility.Platforms;
@@ -53,6 +56,11 @@ namespace ClassicUO.Assets
         public ClientVersion Version { get; }
         public string BasePath { get; }
         public bool IsUOPInstallation { get; private set; }
+
+        /// <summary>
+        /// Current data provider for loading assets (MUL or UOP format).
+        /// </summary>
+        public IDataProvider? CurrentDataProvider { get; private set; }
 
         public AnimationsLoader Animations { get; }
         public AnimDataLoader AnimData { get; }
@@ -138,11 +146,24 @@ namespace ClassicUO.Assets
             return uoFilePath;
         }
 
-        public void Load(bool useVerdata, string lang, string mapsLayouts = "")
+        public void Load(bool useVerdata, string lang, string mapsLayouts = "", string? fileFormatPreference = null)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
-            
+
             Maps.MapsLayouts = mapsLayouts;
+
+            // Initialize data provider based on user preference
+            var factory = new DataProviderFactory();
+            var formatPreference = fileFormatPreference ?? "auto";
+            CurrentDataProvider = factory.CreateProvider(formatPreference);
+
+            if (CurrentDataProvider == null)
+            {
+                throw new InvalidOperationException(
+                    "Failed to initialize data provider. Check file format preference in settings.");
+            }
+
+            Log.Info($"Using {CurrentDataProvider.ProviderName} format");
 
             Animations.Load();
             AnimData.Load();
