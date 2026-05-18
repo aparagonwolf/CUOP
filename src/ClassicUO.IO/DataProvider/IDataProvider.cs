@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: BSD-2-Clause
 
+#nullable enable
+
 using System;
 using ClassicUO.IO;
 
@@ -13,7 +15,7 @@ namespace ClassicUO.IO.DataProvider
         /// <summary>
         /// Gets the underlying UOFile instance. Used for raw file access when needed.
         /// </summary>
-        UOFile File { get; }
+        UOFile? File { get; }
 
         /// <summary>
         /// Gets the name of the provider (e.g., "MUL", "UOP").
