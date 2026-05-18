@@ -2,6 +2,7 @@
 
 using ClassicUO.IO;
 using ClassicUO.Utility;
+using ClassicUO.Utility.Logging;
 using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -25,11 +26,30 @@ namespace ClassicUO.Assets
 
         public override unsafe void Load()
         {
-            var path = FileManager.GetUOFilePath("hues.mul");
+            UOFile file = null;
+            var path = FileManager.GetUOFilePath("Hues.uop");
 
-            FileSystemHelper.EnsureFileExists(path);
+            if (FileManager.CurrentDataProvider?.ProviderName == "UOP" && System.IO.File.Exists(path))
+            {
+                file = new UOFileUop(path, "build/hues/{0:D8}.bin");
+                file.FillEntries();
+            }
+            else
+            {
+                path = FileManager.GetUOFilePath("hues.mul");
 
-            using var file = new UOFileMul(path);
+                if (System.IO.File.Exists(path))
+                {
+                    file = new UOFileMul(path);
+                }
+            }
+
+            if (file == null)
+            {
+                Log.Warn("hues.mul/Hues.uop not found.");
+                return;
+            }
+
             int groupSize = Unsafe.SizeOf<HuesGroup>();
             int entrycount = (int) file.Length / groupSize;
             HuesCount = entrycount * 8;
@@ -40,9 +60,15 @@ namespace ClassicUO.Assets
                 HuesRange[i] = file.Read<HuesGroup>();
             }
 
+            file.Dispose();
+
             path = FileManager.GetUOFilePath("radarcol.mul");
 
-            FileSystemHelper.EnsureFileExists(path);
+            if (!System.IO.File.Exists(path))
+            {
+                Log.Warn("radarcol.mul not found.");
+                return;
+            }
 
             using var radarcol = new UOFileMul(path);
             RadarCol = new ushort[radarcol.Length / sizeof(ushort)];

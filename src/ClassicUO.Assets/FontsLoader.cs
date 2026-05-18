@@ -114,7 +114,13 @@ namespace ClassicUO.Assets
 
         public override unsafe void Load()
         {
-            UOFileMul fonts = new UOFileMul(FileManager.GetUOFilePath("fonts.mul"));
+            string fontsPath = FileManager.GetUOFilePath("fonts.mul");
+            UOFileMul fonts = null;
+
+            if (File.Exists(fontsPath))
+            {
+                fonts = new UOFileMul(fontsPath);
+            }
 
             for (int i = 0; i < 20; i++)
             {
@@ -126,6 +132,12 @@ namespace ClassicUO.Assets
                 {
                     _unicodeFontAddress[i] = new UOFileMul(path);
                 }
+            }
+
+            if (fonts == null)
+            {
+                Log.Warn("fonts.mul not found. Fonts will not be loaded.");
+                return;
             }
 
             int fontHeaderSize = sizeof(FontHeader);

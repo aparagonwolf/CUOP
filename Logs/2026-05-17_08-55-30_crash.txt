@@ -1,0 +1,34 @@
+######################## [START LOG] ########################
+ClassicUO [STANDARD_BUILD] - 1.1.0.0 - 05/17/2026 20:55:30
+OS: Win32NT x64
+Thread: CUO_MAIN_THREAD
+
+Shard: 127.0.0.1
+ClientVersion: 2.46.0.3
+
+Exception:
+System.IO.FileNotFoundException: IO_FileNotFound_FileName, C:\Users\Tristan\Desktop\kruo\fonts.mul
+IO_FileName_Name, C:\Users\Tristan\Desktop\kruo\fonts.mul
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.Open(String path, FileMode mode, FileAccess access, FileShare share)
+   at ClassicUO.IO.UOFile..ctor(String filepath) in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\UOFile.cs:line 11
+   at ClassicUO.IO.UOFileMul..ctor(String file) in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.IO\UOFileMul.cs:line 14
+   at ClassicUO.Assets.FontsLoader.Load() in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Assets\FontsLoader.cs:line 117
+   at ClassicUO.Assets.UOFileManager.Load(Boolean useVerdata, String lang, String mapsLayouts, String fileFormatPreference) in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Assets\UOFileManager.cs:line 174
+   at ClassicUO.UltimaOnline.LoadUOFiles() in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\Client.cs:line 192
+   at ClassicUO.UltimaOnline.Load(GameController game) in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\Client.cs:line 45
+   at ClassicUO.GameController.LoadContent() in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\GameController.cs:line 131
+   at Microsoft.Xna.Framework.Game.Initialize() in C:\Users\Tristan\Desktop\ClassicUO\external\FNA\src\Game.cs:line 656
+   at ClassicUO.GameController.Initialize() in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\GameController.cs:line 114
+   at Microsoft.Xna.Framework.Game.DoInitialize() in C:\Users\Tristan\Desktop\ClassicUO\external\FNA\src\Game.cs:line 777
+   at Microsoft.Xna.Framework.Game.Run() in C:\Users\Tristan\Desktop\ClassicUO\external\FNA\src\Game.cs:line 409
+   at ClassicUO.Client.Run(IPluginHost pluginHost) in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\Client.cs:line 225
+   at ClassicUO.Bootstrap.Boot(UnmanagedAssistantHost pluginHost, String[] args) in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\Main.cs:line 224
+   at ClassicUO.Bootstrap.Main(String[] args) in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\Main.cs:line 39
+######################## [END LOG] ########################
+
+
+
