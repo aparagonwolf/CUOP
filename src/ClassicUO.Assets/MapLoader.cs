@@ -219,19 +219,20 @@ namespace ClassicUO.Assets
 
             if (!foundOneMap)
             {
-                throw new FileNotFoundException("No maps found.");
+                Log.Warn("No maps found in the data directory.");
+                return;
             }
 
 
             int mapblocksize = sizeof(MapBlock);
 
-            if (_filesMap[0].Length / mapblocksize == 393216 || FileManager.Version < ClientVersion.CV_4011D)
+            if (_filesMap[0] != null && (_filesMap[0].Length / mapblocksize == 393216 || FileManager.Version < ClientVersion.CV_4011D))
             {
                 MapsDefaultSize[0, 0] = MapsDefaultSize[1, 0] = 6144;
             }
 
             // This is an hack to patch correctly all maps when you have to fake map1
-            if (_filesMap[1] == null || _filesMap[1].Length == 0)
+            if (_filesMap[1] == null || (_filesMap[0] != null && _filesMap[1].Length == 0))
             {
                 _filesMap[1] = _filesMap[0];
                 _filesStatics[1] = _filesStatics[0];
