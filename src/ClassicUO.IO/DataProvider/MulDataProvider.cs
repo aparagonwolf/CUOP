@@ -3,7 +3,10 @@
 #nullable enable
 
 using System;
+using System.Runtime.CompilerServices;
 using ClassicUO.IO;
+
+[assembly: InternalsVisibleTo("ClassicUO.IO.Tests")]
 
 namespace ClassicUO.IO.DataProvider
 {
@@ -14,7 +17,7 @@ namespace ClassicUO.IO.DataProvider
     {
         private UOFile? _file;
 
-        public UOFile File => _file!;
+        public UOFile? File => _file;
 
         public string ProviderName => "MUL";
 
