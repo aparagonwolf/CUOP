@@ -855,7 +855,14 @@ namespace ClassicUO.Assets
 
                         if (frameCount == 0)
                         {
-                            uopInfo.ReplacedAnimations[oldGroup] = newGroup;
+                            try
+                            {
+                                uopInfo.ReplacedAnimations[oldGroup] = newGroup;
+                            }
+                            catch (IndexOutOfRangeException)
+                            {
+                                // Skip animation groups outside expected range
+                            }
                         }
 
                         reader.Skip(60);

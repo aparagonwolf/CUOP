@@ -25,7 +25,13 @@ namespace ClassicUO.Assets
         public override void Load()
         {
             var path = FileManager.GetUOFilePath("tiledata.mul");
-            FileSystemHelper.EnsureFileExists(path);
+
+            if (!System.IO.File.Exists(path))
+            {
+                _landData = new LandTiles[0];
+                _staticData = new StaticTiles[0];
+                return;
+            }
 
             using var tileData = new UOFileMul(path);
             tileData.Seek(0, System.IO.SeekOrigin.Begin);
