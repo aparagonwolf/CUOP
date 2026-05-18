@@ -1,0 +1,25 @@
+######################## [START LOG] ########################
+ClassicUO [STANDARD_BUILD] - 1.1.0.0 - 05/17/2026 21:04:39
+OS: Win32NT x64
+Thread: CUO_MAIN_THREAD
+
+Shard: 127.0.0.1
+ClientVersion: 7.0.73.0
+
+Exception:
+System.IndexOutOfRangeException: Arg_IndexOutOfRangeException
+   at ClassicUO.Game.Data.StaticFilters.Load(TileDataLoader tileData) in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\Game\Data\StaticFilters.cs:line 33
+   at ClassicUO.UltimaOnline.LoadUOFiles() in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\Client.cs:line 194
+   at ClassicUO.UltimaOnline.Load(GameController game) in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\Client.cs:line 45
+   at ClassicUO.GameController.LoadContent() in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\GameController.cs:line 131
+   at Microsoft.Xna.Framework.Game.Initialize() in C:\Users\Tristan\Desktop\ClassicUO\external\FNA\src\Game.cs:line 656
+   at ClassicUO.GameController.Initialize() in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\GameController.cs:line 114
+   at Microsoft.Xna.Framework.Game.DoInitialize() in C:\Users\Tristan\Desktop\ClassicUO\external\FNA\src\Game.cs:line 777
+   at Microsoft.Xna.Framework.Game.Run() in C:\Users\Tristan\Desktop\ClassicUO\external\FNA\src\Game.cs:line 409
+   at ClassicUO.Client.Run(IPluginHost pluginHost) in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\Client.cs:line 225
+   at ClassicUO.Bootstrap.Boot(UnmanagedAssistantHost pluginHost, String[] args) in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\Main.cs:line 224
+   at ClassicUO.Bootstrap.Main(String[] args) in C:\Users\Tristan\Desktop\ClassicUO\src\ClassicUO.Client\Main.cs:line 39
+######################## [END LOG] ########################
+
+
+

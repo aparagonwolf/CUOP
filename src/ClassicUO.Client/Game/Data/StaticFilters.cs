@@ -30,6 +30,11 @@ namespace ClassicUO.Game.Data
 
         public static void Load(TileDataLoader tileData)
         {
+            if (tileData.StaticData.Length == 0)
+            {
+                return;
+            }
+
             string path = Path.Combine(CUOEnviroment.ExecutablePath, "Data", "Client");
 
             if (!Directory.Exists(path))

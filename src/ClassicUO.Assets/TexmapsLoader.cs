@@ -23,8 +23,10 @@ namespace ClassicUO.Assets
             string path = FileManager.GetUOFilePath("texmaps.mul");
             string pathidx = FileManager.GetUOFilePath("texidx.mul");
 
-            FileSystemHelper.EnsureFileExists(path);
-            FileSystemHelper.EnsureFileExists(pathidx);
+            if (!System.IO.File.Exists(path) || !System.IO.File.Exists(pathidx))
+            {
+                return;
+            }
 
             _file = new UOFileMul(path, pathidx);
             _file.FillEntries();
